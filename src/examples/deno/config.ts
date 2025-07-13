@@ -29,4 +29,4 @@ export const TARGET_PROJECT_ID = Deno.env.get("TARGET_PROJECT_ID") ||
 /**
  * The relative path to the binary `.penpot` file you want to import.
  */
-export const DEMO_PENPOT_FILE_PATH = "./src/examples/demo.penpot";
+export const DEMO_PENPOT_FILE_PATH = "./demo.penpot";

@@ -72,7 +72,7 @@ To begin interacting with the Penpot API, initialize the `PenpotClient` with you
 
 ```typescript
 import { PenpotClient } from "@ajsb85/penpot-api-client"; // or "jsr:@ajsb85/penpot-api-client" for Deno
-import { ApiError } from "@ajsb85/penpot-api-client/client/errors"; // For robust error handling
+import { ApiHttpError } from "@ajsb85/penpot-api-client/client/errors"; // For robust error handling
 import type { UserProfile } from "@ajsb85/penpot-api-client/types"; // For type safety
 
 async function fetchCurrentUserProfile(): Promise<void> {

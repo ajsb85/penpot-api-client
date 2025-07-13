@@ -1,7 +1,7 @@
 /// <reference lib="deno.ns" />
 
-import { PenpotClient } from "../index.ts";
-import { ApiHttpError } from "../client/errors.ts";
+import { PenpotClient } from "@ajsb85/penpot-api-client";
+import { ApiHttpError } from "@ajsb85/penpot-api-client/errors";
 import * as path from "jsr:@std/path";
 import {
   DEMO_PENPOT_FILE_PATH,
@@ -207,8 +207,7 @@ async function runWorkflow() {
   // --- Save the Exported File ---
   try {
     // Construct a unique output file name for the exported data.
-    const exportOutputFileName =
-      `./src/examples/exported_demo_${Date.now()}.penpot`;
+    const exportOutputFileName = `./exported_demo_${Date.now()}.penpot`;
     // Write the received ArrayBuffer (exported file content) to a new local file.
     // Requires `--allow-write` Deno permission.
     await Deno.writeFile(

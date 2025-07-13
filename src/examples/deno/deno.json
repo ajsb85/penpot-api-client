@@ -1,0 +1,23 @@
+{
+  "$schema": "https://jsr.io/schema/config-file.v1.json",
+  "name": "@ajsb85/penpot-api-client-examples-deno",
+  "version": "1.0.0",
+  "exports": {
+    ".": "./import_export.ts"
+  },
+  "compilerOptions": {
+    "strict": true,
+    "lib": ["ESNext", "DOM"]
+  },
+  "description": "A modern, multi-runtime, type-safe API client for Penpot, designed for Deno, Node.js, Bun, and browsers.",
+  "imports": {
+    "@ajsb85/penpot-api-client": "jsr:@ajsb85/penpot-api-client@^1.0.2",
+    "jsr:@std/path": "jsr:@std/path@^0.225.0"
+  },
+  "tasks": {
+    "dev": "deno run --allow-read --allow-write --allow-env --allow-net ./import_export.ts",
+    "fmt": "deno fmt",
+    "lint": "deno lint",
+    "check": "deno check import_export.ts"
+  }
+}
