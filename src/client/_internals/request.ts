@@ -1,13 +1,14 @@
 /**
- * @file This file provides the core `sendRequest` function, which is responsible for orchestrating
+ * @file This module provides the core `sendRequest` function, which is responsible for orchestrating
  * the entire HTTP request lifecycle within the Penpot API client. This includes applying middleware,
  * executing the `fetch` call, handling various response content types, and managing error propagation.
  *
  * @remarks
  * This internal module is crucial for maintaining consistency across all API calls made by the client.
  * It abstracts away the complexities of network interactions, ensuring that authentication, debugging,
- * and error handling are uniformly applied.
+ * and error handling are uniformly applied. It is not intended for direct public consumption.
  *
+ * @module
  * @packageDocumentation
  */
 

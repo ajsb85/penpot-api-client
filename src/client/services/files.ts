@@ -1,3 +1,20 @@
+/**
+ * @file This module defines the `FilesApi` class, which provides methods
+ * for interacting with the file and project management endpoints of the Penpot API.
+ * It covers essential operations such as retrieving file details, exporting files
+ * in various formats, and importing binary Penpot files.
+ *
+ * @remarks
+ * This class serves as a dedicated client for the file management domain of the Penpot API.
+ * It utilizes the {@link RequestBuilder} to construct and send HTTP requests, ensuring
+ * consistency in request handling, authentication headers, and structured error processing.
+ * The methods within this class directly map to specific RPC commands on the Penpot backend,
+ * such as `get-file`, `export-binfile`, and `import-binfile`.
+ *
+ * @module
+ * @packageDocumentation
+ */
+
 import { RequestBuilder } from "../requestBuilder.ts";
 import type { PenpotClientConfig } from "../../index.ts";
 import type { components, paths } from "../generated/types.ts";
@@ -20,22 +37,6 @@ interface ImportBinfileBody {
   file: Uint8Array | Blob; // The raw file content
   version?: number;
 }
-
-/**
- * @file This file defines the `FilesApi` class, which provides methods
- * for interacting with the file and project management endpoints of the Penpot API.
- * It covers essential operations such as retrieving file details, exporting files
- * in various formats, and importing binary Penpot files.
- *
- * @remarks
- * This class serves as a dedicated client for the file management domain of the Penpot API.
- * It utilizes the {@link RequestBuilder} to construct and send HTTP requests, ensuring
- * consistency in request handling, authentication headers, and structured error processing.
- * The methods within this class directly map to specific RPC commands on the Penpot backend,
- * such as `get-file`, `export-binfile`, and `import-binfile`.
- *
- * @packageDocumentation
- */
 
 /**
  * Provides access to the Files API endpoints.
@@ -167,7 +168,7 @@ export class FilesApi {
   }
 
   /**
-   * Exports a file in a specified binary format (e.g., `.penpot`, SVG, PDF, PNG).
+   * Export a file in a specified binary format (e.g., `.penpot`, SVG, PDF, PNG).
    *
    * This method sends a `POST` request to the `/api/rpc/command/export-binfile` endpoint.
    * It initiates an export process on the server, and the response typically contains

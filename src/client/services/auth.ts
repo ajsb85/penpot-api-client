@@ -1,17 +1,5 @@
-import { RequestBuilder } from "../requestBuilder.ts";
-import type { PenpotClientConfig } from "../../index.ts";
-import type { operations, paths } from "../generated/types.ts";
-
-// Type aliases for better readability, sourced from generated types.
-// FIX: Pointed to the correct, deeply nested type definitions within the `paths`
-// object, as the generator did not create simple aliases in `components.schemas`.
-type LoginParams = operations["login"]["parameters"]["body"]["body"];
-type UserProfile =
-  paths["/command/get-profile"]["post"]["responses"]["default"]["content"]["application/json"];
-type LoginResponse = UserProfile; // The login response is the same as the user profile.
-
 /**
- * @file This file defines the `AuthApi` class, which provides methods
+ * @file This module defines the `AuthApi` class, which provides methods
  * for interacting with the authentication and user-related endpoints of the Penpot API.
  * It encapsulates common authentication operations such as user login, logout, and
  * retrieval of the authenticated user's profile.
@@ -23,8 +11,21 @@ type LoginResponse = UserProfile; // The login response is the same as the user 
  * The methods within this class directly map to specific RPC commands on the Penpot backend,
  * such as `login`, `logout`, and `get-profile`.
  *
+ * @module
  * @packageDocumentation
  */
+
+import { RequestBuilder } from "../requestBuilder.ts";
+import type { PenpotClientConfig } from "../../index.ts";
+import type { operations, paths } from "../generated/types.ts";
+
+// Type aliases for better readability, sourced from generated types.
+// FIX: Pointed to the correct, deeply nested type definitions within the `paths`
+// object, as the generator did not create simple aliases in `components.schemas`.
+type LoginParams = operations["login"]["parameters"]["body"]["body"];
+type UserProfile =
+  paths["/command/get-profile"]["post"]["responses"]["default"]["content"]["application/json"];
+type LoginResponse = UserProfile; // The login response is the same as the user profile.
 
 /**
  * Provides access to the Authentication API endpoints.
@@ -172,6 +173,7 @@ export class AuthApi {
    * async function performLogout() {
    * // The logout RPC command in openapi.json can optionally take a `profileId` in its body.
    * // If not provided, it typically logs out the current session associated with the token.
+   * // const { error: logoutError } = await client.auth.logout({ profileId: userProfile?.id }).exec();
    * const { error: logoutError } = await client.auth.logout().exec();
    *
    * if (!logoutError) {
