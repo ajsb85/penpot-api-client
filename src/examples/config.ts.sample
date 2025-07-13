@@ -1,0 +1,46 @@
+/**
+ * # Penpot API Client - Example Configuration
+ *
+ * This file serves as a template for the configuration required by the example scripts.
+ *
+ * --- SETUP INSTRUCTIONS ---
+ * 1. Make a copy of this file in the same directory.
+ * 2. Rename the copy to `config.ts`.
+ * 3. Fill in the placeholder values below with your actual Penpot credentials and IDs.
+ *
+ * NOTE: The `config.ts` file is included in `.gitignore` to prevent you from
+ * accidentally committing your sensitive credentials to version control.
+ */
+
+/**
+ * Your personal access token from Penpot.
+ * You can generate one in your user settings under the "Access Tokens" section.
+ *
+ * Alternatively, you can set this value as an environment variable named `PENPOT_ACCESS_TOKEN`.
+ * @see https://help.penpot.app/user-guide/personal-access-tokens/
+ */
+export const PENPOT_ACCESS_TOKEN = "YOUR_PENPOT_ACCESS_TOKEN";
+
+/**
+ * The base URL of your Penpot instance.
+ * For the official cloud version, this is "https://design.penpot.app".
+ * If you are self-hosting, use your instance's URL.
+ *
+ * Alternatively, you can set this value as an environment variable named `PENPOT_BASE_URL`.
+ */
+export const PENPOT_BASE_URL = "https://design.penpot.app";
+
+/**
+ * The ID of the project where the `demo.penpot` file will be imported.
+ * You can find the project ID in the URL of your browser when you are inside a project.
+ * It will look like: `.../project/<project-id>/...`
+ *
+ * Alternatively, you can set this value as an environment variable named `TARGET_PROJECT_ID`.
+ */
+export const TARGET_PROJECT_ID = "YOUR_TARGET_PROJECT_ID";
+
+/**
+ * The relative path to the binary `.penpot` file you want to import.
+ * The default path points to the demo file included in the examples directory.
+ */
+export const DEMO_PENPOT_FILE_PATH = "./src/examples/demo.penpot";
