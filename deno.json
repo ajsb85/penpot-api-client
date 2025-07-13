@@ -1,6 +1,6 @@
 {
   "$schema": "https://jsr.io/schema/config-file.v1.json",
-  "name": "@your-scope/penpot-api",
+  "name": "@ajsb85/penpot-api-client",
   "version": "1.0.0",
   "description": "A modern, multi-runtime, type-safe API client for Penpot, designed for Deno, Node.js, Bun, and browsers.",
   "exports": {
