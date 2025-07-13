@@ -12,7 +12,7 @@
   "description": "A modern, multi-runtime, type-safe API client for Penpot, designed for Deno, Node.js, Bun, and browsers.",
   "imports": {
     "@ajsb85/penpot-api-client": "jsr:@ajsb85/penpot-api-client@^1.0.3",
-    "jsr:@std/path": "jsr:@std/path@^0.225.0"
+    "@std/path": "jsr:@std/path@^0.225.0"
   },
   "tasks": {
     "dev": "deno run --allow-read --allow-write --allow-env --allow-net ./import_export.ts",

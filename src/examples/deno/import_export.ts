@@ -2,7 +2,7 @@
 
 import { PenpotClient } from "@ajsb85/penpot-api-client";
 import { ApiHttpError } from "@ajsb85/penpot-api-client/errors";
-import * as path from "jsr:@std/path";
+import * as path from "@std/path";
 import {
   DEMO_PENPOT_FILE_PATH,
   PENPOT_ACCESS_TOKEN,

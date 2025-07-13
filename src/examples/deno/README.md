@@ -18,7 +18,7 @@ deno task check
 
 ## Expected output
 
-```sh
+```console
 deno task dev
 Task dev deno run --allow-read --allow-write --allow-env --allow-net ./import_export.ts
 --- Starting Penpot Import/Export Workflow ---

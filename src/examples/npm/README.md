@@ -1,4 +1,4 @@
-# NPM Usage Example
+# NPM usage example
 
 ```sh
 npm i
@@ -10,4 +10,10 @@ npm start
 
 ```sh
 npm run dev
+```
+
+## Adding the package to new projects
+
+```sh
+npx jsr add @ajsb85/penpot-api-client
 ```
