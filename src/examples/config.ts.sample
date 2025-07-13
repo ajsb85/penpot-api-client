@@ -1,46 +1,121 @@
 /**
- * # Penpot API Client - Example Configuration
+ * @file # Penpot API Client - Example Configuration Template
  *
- * This file serves as a template for the configuration required by the example scripts.
+ * This file serves as a template for the configuration required by the example scripts
+ * provided with the Penpot API client. It defines placeholder values for sensitive
+ * credentials and IDs that you need to replace with your actual Penpot instance details.
  *
+ * @remarks
  * --- SETUP INSTRUCTIONS ---
- * 1. Make a copy of this file in the same directory.
- * 2. Rename the copy to `config.ts`.
- * 3. Fill in the placeholder values below with your actual Penpot credentials and IDs.
+ * 1. **Copy This File:** Make a copy of this file (`config.ts.sample`) in the same directory (`src/examples/`).
+ * 2. **Rename the Copy:** Rename the copied file to `config.ts`.
+ * 3. **Fill in Placeholders:** Replace the placeholder values (e.g., `"YOUR_PENPOT_ACCESS_TOKEN"`)
+ * with your actual Penpot credentials and IDs.
  *
- * NOTE: The `config.ts` file is included in `.gitignore` to prevent you from
- * accidentally committing your sensitive credentials to version control.
+ * **IMPORTANT NOTE:** The `config.ts` file is explicitly included in the `.gitignore`
+ * file of this project. This is a crucial security measure to prevent you from
+ * accidentally committing your sensitive credentials to version control (e.g., Git repositories).
+ * Always ensure your `config.ts` file remains private and is not shared publicly.
+ *
+ * @packageDocumentation
  */
 
 /**
  * Your personal access token from Penpot.
- * You can generate one in your user settings under the "Access Tokens" section.
+ * This token is required for authenticating your API requests to the Penpot instance.
  *
- * Alternatively, you can set this value as an environment variable named `PENPOT_ACCESS_TOKEN`.
- * @see https://help.penpot.app/user-guide/personal-access-tokens/
+ * You can generate a personal access token in your Penpot user settings under the "Access Tokens" section.
+ * It is highly recommended to generate a new token specifically for API access and manage its permissions carefully.
+ *
+ * Alternatively, for Deno and Node.js environments, you can set this value as an environment variable
+ * named `PENPOT_ACCESS_TOKEN`. The example scripts are configured to read from this environment variable
+ * if it exists, falling back to the hardcoded placeholder if not.
+ *
+ * @constant {string} PENPOT_ACCESS_TOKEN
+ * @see https://help.penpot.app/user-guide/personal-access-tokens/ - Official Penpot documentation on Personal Access Tokens.
+ *
+ * @example
+ * ```typescript
+ * // In your actual config.ts file:
+ * export const PENPOT_ACCESS_TOKEN = "pk_your_actual_access_token_here_1234567890abcdef";
+ * ```
+ * @example
+ * ```bash
+ * # Setting as an environment variable (e.g., in your shell profile or CI/CD)
+ * export PENPOT_ACCESS_TOKEN="pk_your_actual_access_token_here_1234567890abcdef"
+ * ```
  */
 export const PENPOT_ACCESS_TOKEN = "YOUR_PENPOT_ACCESS_TOKEN";
 
 /**
  * The base URL of your Penpot instance.
- * For the official cloud version, this is "https://design.penpot.app".
- * If you are self-hosting, use your instance's URL.
+ * This URL is used as the foundation for all API requests made by the client.
+ *
+ * For the official Penpot cloud version, the base URL is `"https://design.penpot.app"`.
+ * If you are self-hosting Penpot, you should use the URL of your own instance (e.g., `"http://localhost:9000"`
+ * or your custom domain).
  *
  * Alternatively, you can set this value as an environment variable named `PENPOT_BASE_URL`.
+ * The example scripts are configured to read from this environment variable if it exists.
+ *
+ * @constant {string} PENPOT_BASE_URL
+ * @example
+ * ```typescript
+ * // In your actual config.ts file:
+ * export const PENPOT_BASE_URL = "[https://design.penpot.app](https://design.penpot.app)";
+ * ```
+ * @example
+ * ```bash
+ * # Setting as an environment variable
+ * export PENPOT_BASE_URL="[https://your-self-hosted-penpot.com](https://your-self-hosted-penpot.com)"
+ * ```
  */
 export const PENPOT_BASE_URL = "https://design.penpot.app";
 
 /**
- * The ID of the project where the `demo.penpot` file will be imported.
- * You can find the project ID in the URL of your browser when you are inside a project.
- * It will look like: `.../project/<project-id>/...`
+ * The ID of the target project where the `demo.penpot` file (or any other file)
+ * will be imported by the example scripts.
+ *
+ * You can find the project ID in the URL of your browser when you are navigating
+ * within a project in the Penpot application. It typically appears in the URL path
+ * like: `.../project/<project-id>/files`.
  *
  * Alternatively, you can set this value as an environment variable named `TARGET_PROJECT_ID`.
+ * The example scripts are configured to read from this environment variable if it exists.
+ *
+ * @constant {string} TARGET_PROJECT_ID
+ * @example
+ * ```typescript
+ * // In your actual config.ts file:
+ * export const TARGET_PROJECT_ID = "a03ea8b8-fc8a-8124-8006-78afc4291363"; // Example UUID
+ * ```
+ * @example
+ * ```bash
+ * # Setting as an environment variable
+ * export TARGET_PROJECT_ID="your-project-uuid-here"
+ * ```
  */
 export const TARGET_PROJECT_ID = "YOUR_TARGET_PROJECT_ID";
 
 /**
- * The relative path to the binary `.penpot` file you want to import.
- * The default path points to the demo file included in the examples directory.
+ * The relative path to the binary `.penpot` file that the example scripts
+ * will attempt to import.
+ *
+ * By default, this path points to a sample `demo.penpot` file included within
+ * the `src/examples` directory of this project. You can modify this path
+ * to point to any other `.penpot` file on your local file system.
+ *
+ * @constant {string} DEMO_PENPOT_FILE_PATH
+ * @example
+ * ```typescript
+ * // Default path to the included demo file:
+ * export const DEMO_PENPOT_FILE_PATH = "./src/examples/demo.penpot";
+ *
+ * // Example: Pointing to a different file in the same directory:
+ * // export const DEMO_PENPOT_FILE_PATH = "./src/examples/my_custom_design.penpot";
+ *
+ * // Example: Pointing to a file outside the examples directory (adjust path as needed):
+ * // export const DEMO_PENPOT_FILE_PATH = "../../../my_designs/project_alpha.penpot";
+ * ```
  */
 export const DEMO_PENPOT_FILE_PATH = "./src/examples/demo.penpot";

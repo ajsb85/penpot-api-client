@@ -92,3 +92,4 @@ build
 # Example files
 *.penpot
 src/examples/config.ts
+penpot-api.txt
