@@ -27,7 +27,7 @@ deno add @ajsb85/penpot-api-client
 Alternatively, you may import directly:
 
 ```typescript
-import { PenpotClient } from "jsr:@ajsb85/penpot-api-client@^1.0.0";
+import { PenpotClient } from "jsr:@ajsb85/penpot-api-client@^1.0.2";
 ```
 
 ### Node.js / Bun
@@ -56,7 +56,7 @@ Using JSR's CDN:
 
 ```html
 <script type="module">
-  import { PenpotClient } from "https://jsr.io/@ajsb85/penpot-api-client@^1.0.0/src/index.ts";
+  import { PenpotClient } from "https://jsr.io/@ajsb85/penpot-api-client@^1.0.2/src/index.ts";
 
   // Your application logic here
   const client = new PenpotClient({
