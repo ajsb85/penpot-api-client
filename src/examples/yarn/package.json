@@ -1,13 +1,18 @@
 {
-  "name": "yarn",
+  "name": "penpot-profile-fetcher",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node src/index.mjs",
+    "dev": "nodemon src/index.mjs",
+    "clean": "rm -rf dist"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "type": "commonjs"
+  "dependencies": {
+    "@ajsb85/penpot-api-client": "npm:@jsr/ajsb85__penpot-api-client"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10"
+  },
+  "license": "MIT",
+  "author": "ajsb85"
 }
