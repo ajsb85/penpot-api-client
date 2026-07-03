@@ -14,7 +14,7 @@
   },
   "imports": {
     "jsr:@std/assert": "jsr:@std/assert@^0.226.0",
-    "jsr:@std/path": "jsr:@std/path@^0.225.0",
+    "jsr:@std/path": "jsr:@std/path@^1.0.0",
     "jsr:@std/fs": "jsr:@std/fs@^0.229.0",
     "openapi-typescript": "npm:openapi-typescript@^6.7.5",
     "eventsource-parser": "npm:eventsource-parser@^1.1.2",
