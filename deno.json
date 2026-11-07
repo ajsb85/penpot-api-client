@@ -18,7 +18,7 @@
     "jsr:@std/fs": "jsr:@std/fs@^0.229.0",
     "openapi-typescript": "npm:openapi-typescript@^6.7.5",
     "eventsource-parser": "npm:eventsource-parser@^1.1.2",
-    "vitest": "npm:vitest@^1.6.0"
+    "vitest": "npm:vitest@^5.0.0"
   },
   "tasks": {
     "gen": "deno run --allow-read --allow-write --allow-env ./src/scripts/generate.ts",
